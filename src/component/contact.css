@@ -1,0 +1,26 @@
+.contact{
+    padding: 1.5rem;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.page-title{
+    margin-bottom: 1rem;
+}
+
+.subtitle{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--alternativecolor);
+}
+
+.title{
+    font-size: 1.5rem;
+    color: var(--maincolor);
+    font-weight: bold;
+}

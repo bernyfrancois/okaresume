@@ -5,6 +5,8 @@ import './App.css';
 import Header from "./component/Header";
 import HomePage from "./component/HomePage";
 import Projects from "./component/Projects";
+import Skills from "./component/Skills";
+import Contact from "./component/Contact";
 
 function App() {
   return (
@@ -14,11 +16,17 @@ function App() {
             <Header/>
             <div>
                 <Switch>
-                    <Route exact={true} path="/">
-                        <HomePage/>
-                    </Route>
-                    <Route exact={true} path="/projects">
+                    <Route path="/projects">
                         <Projects/>
+                    </Route>
+                    <Route path="/skills">
+                        <Skills/>
+                    </Route>
+                    <Route path="/contact">
+                        <Contact/>
+                    </Route>
+                    <Route exact path="/">
+                        <HomePage/>
                     </Route>
                 </Switch>
             </div>

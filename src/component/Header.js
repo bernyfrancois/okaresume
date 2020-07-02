@@ -49,19 +49,20 @@ class Header extends Component {
                     <h2>Menu</h2>
                     <ul>
                         <li><NavLink to={"/"} onClick={this.toggleMenu}>Home</NavLink></li>
-                        <li><NavLink to={"/projects"} href="#" onClick={this.toggleMenu}>Projects</NavLink></li>
-                        <li><NavLink to={"/contact"} href="#" onClick={this.toggleMenu}>Contact</NavLink></li>
+                        <li><NavLink to={"/projects"} onClick={this.toggleMenu}>Projects</NavLink></li>
+                        <li><NavLink to={"/skills"} onClick={this.toggleMenu}>Skills</NavLink></li>
+                        <li><NavLink to={"/contact"} onClick={this.toggleMenu}>Contact</NavLink></li>
                     </ul>
                     <small className={"copy-text"}>Copyright 2020 Berny Itoutou</small>
                 </nav>
-                <a className="menu-toggler" onClick={this.toggleMenu}>
+                <button className="menu-toggler" onClick={this.toggleMenu}>
                     <span>Menu</span>
                     <span className="toggler-btn">
                         <span className="hamburger hamburger-1"/>
                         <span className="hamburger hamburger-2"/>
                         <span className="hamburger hamburger-3"/>
                     </span>
-                </a>
+                </button>
             </header>
         );
     }
