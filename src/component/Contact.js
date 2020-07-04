@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Select from 'react-select';
 import "./contact.css";
 import linkedin from "../files/linkedin.png";
 import github from "../files/github.png";
@@ -9,9 +10,24 @@ class Contact extends Component {
         this.state = {
             name: undefined,
             email: undefined,
-            service: undefined,
-            budget: undefined,
+            currentService: undefined,
+            currentBudget: undefined,
             content: undefined,
+            objectSelect: {
+                options: [
+                    { value: 'help', label: 'Need help with a project' },
+                    { value: 'partnership', label: 'Looking for long term partnership' },
+                    { value: 'job', label: 'Had a full-time job offer' },
+                    { value: 'hello', label: 'Just want to say some words' }
+                ]
+            },
+            budgetSelect: {
+                options: [
+                    { value: '1000-2500', label: '1000€-2500€' },
+                    { value: '2500-5000', label: '2500€-5000€' },
+                    { value: '5000+', label: '5000€ or more' },
+                ]
+            },
         };
     }
 
@@ -25,15 +41,7 @@ class Contact extends Component {
 
 
     handleSubmit = (event) => {
-        alert(this.setState(
-            {
-                name: undefined,
-                email: undefined,
-                service: undefined,
-                budget: undefined,
-                content: undefined,
-            }
-        ));
+        console.log(this.state.name)
         event.preventDefault();
     }
 
@@ -69,19 +77,19 @@ class Contact extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             <span className="label-title">Your name</span>
-                            <input type="text" className={"single-bar"} value={this.state.name} onChange={this.handleChange} placeholder={"What's your name?"}/>
+                            <input required type="text" className={"single-bar"} value={this.state.name} onChange={this.handleChange} placeholder={"What's your name?"}/>
                         </label>
                         <label>
                             <span className="label-title">Your email</span>
-                            <input type="email" className={"single-bar"} value={this.state.email} onChange={this.handleChange} placeholder={"What's your email address?"}/>
+                            <input required type="email" className={"single-bar"} value={this.state.email} onChange={this.handleChange} placeholder={"What's your email address?"}/>
                         </label>
                         <label>
-                            <span className="label-title">Object</span>
-                            <input type="text" className={"single-bar"} value={this.state.service} onChange={this.handleChange} placeholder={"What's can i do for you?"}/>
+                            <span className="label-title">The object</span>
+                            <SelectInput options={this.state.objectSelect.options} placeholder={"What's can i do for you?"}/>
                         </label>
                         <label>
-                            <span className="label-title">Budget</span>
-                            <input type="text" className={"single-bar"} value={this.state.budget} onChange={this.handleChange} placeholder={"What's your budget?"}/>
+                            <span className="label-title">Your budget</span>
+                            <SelectInput options={this.state.budgetSelect.options} placeholder={"What's your budget?"}/>
                         </label>
                         <label className={"message"}>
                             <span className="label-title">Message</span>
@@ -96,5 +104,24 @@ class Contact extends Component {
         );
     }
 }
+
+
+const SelectInput = ({options, placeholder}) => (
+    <Select
+        placeholder={placeholder}
+        label="Single select"
+        options={options}
+        theme={theme => ({
+            ...theme,
+            borderRadius: 0,
+            borderColor: "#0f141e",
+            colors: {
+                ...theme.colors,
+                primary25: '#FBCB3B',
+                primary: '#0f141e',
+            },
+        })}
+    />
+)
 
 export default Contact;

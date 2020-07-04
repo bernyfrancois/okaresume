@@ -104,7 +104,7 @@ class Skills extends Component {
                     <span>My skills</span>
                 </div>
                 <div className="description">
-                    <h1>My T Shaped Profile</h1>
+                    <h1>My Profile</h1>
                     <div className="pp">
                         <img src={pp} alt="icon"/>
                     </div>

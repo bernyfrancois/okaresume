@@ -14,11 +14,11 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
   position: absolute;
   font-size: 13rem;
   text-align: center;
+  font-weight: bold;
   width: 98vw;
   z-index: -1;
-  color: var(--alternativecolor);
+  color: #fff;
   opacity: 0.08;
-  text-shadow: #0f141e 0px 0px 1px 10px;
-  text-transform: uppercase;
   user-select: none;
+  text-shadow: 0 1px 150px rgba(15, 20, 30, 0.8);
 }
