@@ -18,6 +18,7 @@
     font-size: 13px;
     margin: 0.3rem 0;
     padding: 0 1rem;
+    overflow: hidden;
 }
 
 .skill-col .skill-title{
@@ -27,6 +28,11 @@
 
 .skill-col .skill-levels .level{
     background: #29354E;
+    transition: height 0.2s ease-out;
+}
+
+.active .skill-col .skill-levels .level{
+    height: 50px;
 }
 
 .skill-col .skill-levels{
@@ -46,8 +52,3 @@
     width: auto;
 }
 
-.skill-tools{
-    border-left: 1px solid #f6f6f6;
-    border-right: 1px solid #f6f6f6;
-    min-height: 120px;
-}

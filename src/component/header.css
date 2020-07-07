@@ -86,8 +86,8 @@ header{
 
 .toggler-btn {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     position: relative;
     text-align: center;
     line-height: 40px;
@@ -97,6 +97,7 @@ header{
     transition: all ease-out 200ms;
     cursor: pointer;
     z-index: 2;
+    margin-left: 10px;
 }
 
 .active-menu .hamburger {

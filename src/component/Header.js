@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { NavLink, Link } from "react-router-dom";
 import "./header.css";
+
 const logo = <svg id="logo" width="612" height="612" viewBox="0 0 612 612" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle className="color-primary" cx="306" cy="306" r="296" stroke="#0A111E" strokeWidth="20"/>
     <rect className="color-secondary" x="272.054" y="92" width="70.8137" height="466" fill="#FBCB3B"/>

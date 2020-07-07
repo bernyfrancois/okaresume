@@ -1,7 +1,5 @@
 .contact{
     padding: 8rem 1.5rem 1.5rem;
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: space-between;
 }
@@ -68,7 +66,12 @@
     width: 45%;
     display: flex;
     flex-direction: column;
-    margin: 2rem .5rem;
+    font-size: 20px;
+    margin: 2rem .5rem 2rem 0;
+}
+
+.form form label > *{
+    font-size: 15px!important;
 }
 
 .form form .full-border {
@@ -88,15 +91,15 @@
 .form .message{
     width: 100%;
 }
+
 .form .message textarea{
     overflow:hidden;
-    /* demo only: */
-    padding:5px 0;
+    padding:10px 0;
     width:100%;
-    font-size:14px;
     display:block;
     border-bottom:1px solid rgba(135, 138, 143, 0.3);
     transition: all 0.3s;
+    height: auto;
 }
 
 .form form .label-title{
@@ -119,7 +122,6 @@
         transform: translate(0rem, 3.5rem);
     }
 }
-
 @keyframes topAnimation {
     from {
         -webkit-transform: translate(0rem, 0);
@@ -162,12 +164,13 @@ button.btn {
     padding: 1rem 2.5rem;
     background: transparent;
     outline: none;
-    font-size: 15px;
-    color: #111111;
+    font-size: 13px;
+    color: var(--maincolor);
     -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
     cursor: pointer;
 }
+
 button.btn::after, button.btn::before {
     border: 0;
     content: "";
@@ -179,6 +182,7 @@ button.btn::after, button.btn::before {
     z-index: -2;
     border-radius: 50%;
 }
+
 button.btn::before {
     border: 0;
     background-color: var(--secondarycolor);
@@ -187,6 +191,7 @@ button.btn::before {
     -webkit-animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
     animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
 }
+
 button.btn::after {
     background-color: var(--maincolor);
     top: 3rem;

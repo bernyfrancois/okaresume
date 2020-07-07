@@ -1,7 +1,5 @@
 .skills{
     padding: 1.5rem;
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

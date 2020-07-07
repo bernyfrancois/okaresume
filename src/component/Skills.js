@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import "./skills.css";
 import pp from "../files/profile-img.png";
 import figma from "../files/figma.png";
-import "./shape.css"
+import "./shape.css";
+
 class Skills extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            active: false,
             profile: {
                 competences: [
                     {
@@ -97,13 +99,14 @@ class Skills extends Component {
             }
         }
     }
+
     render() {
         return (
-            <section className={"skills"}>
+            <section className={"skills page"}>
                 <div className="back-deco">
                     <span>My skills</span>
                 </div>
-                <div className="description">
+                <div className="description animate-left">
                     <h1>My Profile</h1>
                     <div className="pp">
                         <img src={pp} alt="icon"/>
@@ -117,7 +120,7 @@ class Skills extends Component {
                         </p>
                     </div>
                 </div>
-                <div className="skills-shape">
+                <div className="skills-shape animate-right">
                     <TShape skills={this.state.profile.competences}/>
                 </div>
             </section>
@@ -126,7 +129,7 @@ class Skills extends Component {
 }
 
 const TShape = ({skills}) => (
-    <div className="shape-container">
+    <div className={"shape-container"}>
         {
             skills.map(el => (
                 <div className="skill-col">

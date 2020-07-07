@@ -1,16 +1,16 @@
 import React from 'react';
 import "./home.css";
 import profilPic from "../files/profile-img.png"
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const HomePage = () => {
     return (
-        <section className={"homepage"}>
+        <section className={"homepage page"}>
             <div className="back-deco">
                 <span>Welcome</span>
             </div>
             <div className="content">
-                <div className="text-zone">
+                <div className="text-zone animate-left">
                     <div className="my-name">
                         <span>Berny I.</span>
                     </div>
@@ -22,7 +22,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="illustration-zone">
-                    <div className="illustration-img">
+                    <div className="illustration-img animate-right">
                         <div className="deco-circle"/>
                         <div className="deco-circle"/>
                         <div className="deco-circle"/>
@@ -31,9 +31,9 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="home-menu">
-                <NavLink to={"/projects"}>View projects</NavLink>
+                <Link to={"/projects"}>View projects</Link>
                 <span className="link-separator">or</span>
-                <a href="#">View skills</a>
+                <Link to={"/skills"}>View skills</Link>
             </div>
         </section>
     );

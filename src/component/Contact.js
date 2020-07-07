@@ -8,11 +8,11 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: undefined,
-            email: undefined,
-            currentService: undefined,
-            currentBudget: undefined,
-            content: undefined,
+            name: "",
+            email: "",
+            currentObject: "",
+            currentBudget: "",
+            content: "",
             objectSelect: {
                 options: [
                     { value: 'help', label: 'Need help with a project' },
@@ -32,13 +32,19 @@ class Contact extends Component {
     }
 
     handleChange = (event) => {
-        this.setState({value: event.target.value});
-    }
-    handleTxtChange = (event) => {
-        this.setState({value: event.target.value});
-        this.growHeight(event.target)
+        const target = event.target;
+        const value = target.name === 'isGoing' ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
     }
 
+    handleTxtChange = (event) => {
+        this.handleChange(event)
+        this.growHeight(event.target)
+    }
 
     handleSubmit = (event) => {
         console.log(this.state.name)
@@ -49,13 +55,21 @@ class Contact extends Component {
         target.style.height = target.scrollHeight + 'px';
     }
 
+    objectHandler = (target) => {
+        this.setState({currentObject: target.value})
+    }
+
+    budgetHandler = (target) => {
+        this.setState({currentBudget: target.value})
+    }
+
     render() {
         return (
-            <section className={"contact"}>
+            <section className={"contact page"}>
                 <div className="back-deco">
                     <span>Contact me</span>
                 </div>
-                <div className="links">
+                <div className="links animate-left">
                     <div className="page-title">
                     <span className="subtitle">
                         Contact
@@ -67,33 +81,33 @@ class Contact extends Component {
                         Social networks
                     </span>
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/fran%C3%A7ois-itoutou-652a2917a/">François Itoutou <img className="social-icon" src={linkedin} alt="icon"/></a></li>
-                            <li><a href="https://github.com/bernyfrancois">bernyfrancois <img className="social-icon" src={github} alt="icon"/></a></li>
+                            <li><a href="https://www.linkedin.com/in/fran%C3%A7ois-itoutou-652a2917a/" target="_blank">François Itoutou <img className="social-icon" src={linkedin} alt="icon"/></a></li>
+                            <li><a href="https://github.com/bernyfrancois" target="_blank">bernyfrancois <img className="social-icon" src={github} alt="icon"/></a></li>
                         </ul>
                     </div>
                 </div>
-                <div className="form">
+                <div className="form animate-right">
                     <h3>Got a project ? Leave me a message if you want to work together on something exciting. Web or Mobile.</h3>
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             <span className="label-title">Your name</span>
-                            <input required type="text" className={"single-bar"} value={this.state.name} onChange={this.handleChange} placeholder={"What's your name?"}/>
+                            <input name={"name"} autoFocus required type="text" className={"single-bar"} value={this.state.name} onChange={this.handleChange} placeholder={"What's your name?"}/>
                         </label>
                         <label>
                             <span className="label-title">Your email</span>
-                            <input required type="email" className={"single-bar"} value={this.state.email} onChange={this.handleChange} placeholder={"What's your email address?"}/>
+                            <input name={"email"} required type="email" className={"single-bar"} value={this.state.email} onChange={this.handleChange} placeholder={"What's your email address?"}/>
                         </label>
                         <label>
                             <span className="label-title">The object</span>
-                            <SelectInput options={this.state.objectSelect.options} placeholder={"What's can i do for you?"}/>
+                            <SelectInput changeHandler={this.objectHandler} options={this.state.objectSelect.options} placeholder={"What's can i do for you?"}/>
                         </label>
                         <label>
                             <span className="label-title">Your budget</span>
-                            <SelectInput options={this.state.budgetSelect.options} placeholder={"What's your budget?"}/>
+                            <SelectInput changeHandler={this.budgetHandler} options={this.state.currentObject === "hello" ? [{ value: 'nothing', label: 'My voice 👀'}] : this.state.budgetSelect.options} placeholder={"What's your budget?"}/>
                         </label>
                         <label className={"message"}>
                             <span className="label-title">Message</span>
-                            <textarea value={this.state.content} onChange={this.handleTxtChange} placeholder={"What's your message?"}/>
+                            <textarea rows={"1"} name={"content"} value={this.state.content} onChange={this.handleTxtChange} placeholder={"What's your message?"}/>
                         </label>
                         <div className="btn-container">
                             <button type={"sudmit"} className="btn">Send message</button>
@@ -105,8 +119,7 @@ class Contact extends Component {
     }
 }
 
-
-const SelectInput = ({options, placeholder}) => (
+const SelectInput = ({options, placeholder, changeHandler}) => (
     <Select
         placeholder={placeholder}
         label="Single select"
@@ -121,6 +134,8 @@ const SelectInput = ({options, placeholder}) => (
                 primary: '#0f141e',
             },
         })}
+        onChange={changeHandler}
+
     />
 )
 
