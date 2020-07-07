@@ -79,7 +79,7 @@
 .project-item .project-banner .banner-image {
     height: 450px;
     background: #dedede;
-    width: 50%;
+    width: 700px;
     overflow: hidden;
     transition: all 1s ease-out;
 }

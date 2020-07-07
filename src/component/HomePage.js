@@ -12,7 +12,7 @@ const HomePage = () => {
             <div className="content">
                 <div className="text-zone animate-left">
                     <div className="my-name">
-                        <span>Berny I.</span>
+                        <span>Berny Itoutou</span>
                     </div>
                     <div className="title">
                         <h1>Website and Web <br/> Application developer</h1>

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
 
 body{
-  font-family: sans-serif;
+  font-family: 'Monserrat', sans-serif;
 }
 
 :root{
@@ -9,7 +9,9 @@ body{
   --secondarycolor: #FBCB3B;
   --alternativecolor: #878a8f;
 }
-
+h1, h2, h3, h4{
+  font-family: 'Oswald', sans-serif;
+}
 :focus {
   outline: none;
 }
@@ -56,6 +58,6 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 }
 .page-enter-active,
 .page-exit-active{
-  transition: opacity 400ms;
-  transition-delay: 0.3s;
+  transition: opacity 300ms;
+  transition-delay: 0.2s;
 }

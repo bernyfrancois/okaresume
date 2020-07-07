@@ -25,10 +25,10 @@ function App() {
         console.log(leftBlock)
         gsap.from(
             leftBlock,
-            0.8,
+            0.7,
             {
                 y: 100,
-                delay: 0.6,
+                delay: 0.3,
                 ease: "power3.InOut",
                 opacity: 0,
                 stagger: {
@@ -38,10 +38,10 @@ function App() {
         )
         gsap.from(
             rightBlock,
-            0.8,
+            0.7,
             {
                 x: 100,
-                delay: 0.6,
+                delay: 0.3,
                 ease: "power3.InOut",
                 opacity: 0,
                 stagger: {
@@ -57,10 +57,10 @@ const onExit = node => {
         console.log(leftBlock)
         gsap.to(
             leftBlock,
-            0.8,
+            0.7,
             {
                 y: -100,
-                delay: 0.6,
+                delay: 0.3,
                 ease: "power3.InOut",
                 opacity: 1,
                 stagger: {
@@ -71,10 +71,10 @@ const onExit = node => {
 
         gsap.to(
             rightBlock,
-            0.8,
+            0.7,
             {
                 x: -100,
-                delay: 0.6,
+                delay: 0.3,
                 ease: "power3.InOut",
                 opacity: 1,
                 stagger: {
