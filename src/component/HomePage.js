@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link, NavLink} from "react-router-dom";
 import "./home.css";
 import profilPic from "../files/profile-img.png"
-import {Link, NavLink} from "react-router-dom";
 
 const HomePage = () => {
     return (

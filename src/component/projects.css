@@ -124,11 +124,10 @@
 }
 
 .project-item .project-link a{
-    color: #fff;
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    padding: .5rem 2rem;
-    background: var(--maincolor);
+    padding: .5rem;
+    color: var(--maincolor);
     display: inline-flex;
     align-items: center;
 }

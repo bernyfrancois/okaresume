@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
+import emailjs from "emailjs-com";
 import "./contact.css";
 import linkedin from "../files/linkedin.png";
 import github from "../files/github.png";
+const emailId = "user_o4DXJP8WSMpuo7XuMHM5d";
 
 class Contact extends Component {
     constructor(props) {
@@ -47,8 +49,8 @@ class Contact extends Component {
     }
 
     handleSubmit = (event) => {
-        console.log(this.state.name)
         event.preventDefault();
+        this.sendMail()
     }
 
     growHeight = (target) => {
@@ -61,6 +63,22 @@ class Contact extends Component {
 
     budgetHandler = (target) => {
         this.setState({currentBudget: target.value})
+    }
+
+    sendMail = () => {
+        const email = {
+            "user_name": this.state.name,
+            "user_email": this.state.email,
+            "user_object": this.state.currentObject,
+            "user_budget": this.state.currentBudget,
+            "user_message":this.state.content
+        }
+        emailjs.send('gmail', 'resume', email, emailId)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
     }
 
     render() {
@@ -101,9 +119,9 @@ class Contact extends Component {
                             <span className="label-title">The object</span>
                             <SelectInput changeHandler={this.objectHandler} options={this.state.objectSelect.options} placeholder={"What's can i do for you?"}/>
                         </label>
-                        <label>
+                        <label className={`${this.state.currentObject === "hello" ? "disabled" : ""} budget-label`}>
                             <span className="label-title">Your budget</span>
-                            <SelectInput changeHandler={this.budgetHandler} options={this.state.currentObject === "hello" ? [{ value: 'nothing', label: 'My voice 👀'}] : this.state.budgetSelect.options} placeholder={"What's your budget?"}/>
+                            <SelectInput changeHandler={this.budgetHandler} options={this.state.budgetSelect.options} placeholder={"What's your budget?"}/>
                         </label>
                         <label className={"message"}>
                             <span className="label-title">Message</span>

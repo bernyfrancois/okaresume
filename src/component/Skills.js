@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "./skills.css";
-import pp from "../files/profile-img.png";
+import pp from "../files/pp.png";
 import figma from "../files/figma.png";
 import "./shape.css";
 
