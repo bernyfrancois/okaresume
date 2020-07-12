@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .homepage .text-zone .my-name{
@@ -53,8 +54,10 @@
 }
 
 .homepage .illustration-zone .illustration-img{
-    width: 400px;
-    height: 400px;
+    min-width: 380px;
+    width: 380px;
+    min-height: 380px;
+    height: 380px;
     background: var(--maincolor);
     border-radius: 50%;
     position: relative;
@@ -122,4 +125,96 @@
         border-width: 20px;
         left: -60px;
     }
+}
+
+@media all and (max-width: 1024px){
+
+    .homepage .illustration-zone .illustration-img{
+        min-width: 250px;
+        min-height: 250px;
+        width: 250px;
+        height: 250px;
+        margin-top: 1rem;
+    }
+
+    .homepage .illustration-zone .deco-circle{
+        display: none;
+    }
+
+}
+
+@media all and (max-width: 600px){
+
+    .homepage .illustration-zone .illustration-img{
+        min-width: 250px;
+        min-height: 250px;
+        width: 250px;
+        height: 250px;
+        margin-top: 1rem;
+    }
+
+    .homepage .illustration-zone {
+        justify-content: initial;
+        padding-left: 0;
+    }
+
+}
+
+@media all and (max-width: 490px){
+
+    .homepage .illustration-zone .illustration-img{
+        min-width: 200px;
+        min-height: 200px;
+        width: 200px;
+        height: 200px;
+        margin-top: 1rem;
+    }
+
+
+    .homepage .text-zone .my-name{
+        text-transform: uppercase;
+        color: var(--alternativecolor);
+        margin-bottom: 0rem;
+    }
+
+    .homepage .illustration-zone {
+        justify-content: initial;
+        padding-left: 0;
+    }
+
+    .homepage .text-zone .title h1{
+        font-size: 2.5rem;
+    }
+
+    .homepage .text-zone .title p{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+}
+
+@media all and (max-width: 330px){
+
+    .homepage .illustration-zone .illustration-img{
+        min-width: 160px;
+        min-height: 160px;
+        width: 160px;
+        height: 160px;
+        margin-top: 1rem;
+    }
+
+    .homepage .illustration-zone {
+        justify-content: initial;
+        padding-left: 0;
+    }
+
+    .homepage .text-zone .title h1{
+        font-size: 2rem;
+    }
+
+    .homepage .text-zone .title p{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
 }

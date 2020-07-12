@@ -2,6 +2,7 @@
 
 body{
   font-family: 'Monserrat', sans-serif;
+  font-weight: 300;
 }
 
 :root{
@@ -42,6 +43,15 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+
+
+
+@media all and (max-width: 480px){
+
+  .page{
+    padding: 1rem!important;
+  }
 }
 
 .page-enter{

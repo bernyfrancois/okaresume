@@ -74,18 +74,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project-item .project-banner .banner-image {
-    height: 450px;
     background: #dedede;
-    width: 700px;
+    max-width: 700px;
     overflow: hidden;
     transition: all 1s ease-out;
 }
 
 .project-item .project-banner .banner-infos {
-    width: 40%;
+    width: 30%;
     padding-left: 1rem;
     height: 450px;
     justify-content: center;
@@ -130,4 +130,90 @@
     color: var(--maincolor);
     display: inline-flex;
     align-items: center;
+}
+
+
+@media all and (max-width: 1024px){
+
+    .project-item .project-banner .banner-image {
+        max-width: 550px;
+    }
+
+    .project-item .project-banner .banner-infos {
+        height: 350px;
+    }
+
+}
+
+@media all and (max-width: 790px){
+
+    .project-item .project-banner{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .project-item .project-banner .banner-image {
+        max-width: 350px;
+    }
+
+    .project-item .project-banner .banner-infos {
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+@media all and (max-width: 480px){
+
+    .project-item .project-banner .banner-infos {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .project-item .project-banner .project-details {
+        flex-direction: row;
+    }
+
+    .projects h2{
+        margin-bottom: 0;
+    }
+
+    .project-item {
+        margin-bottom: 0;
+    }
+
+    .project-item .project-banner .project-title {
+        font-size: 2rem;
+        margin-bottom: 0rem;
+    }
+
+    .project-item .project-banner .project-details h4 {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-item .project-banner .project-details ul li {
+        font-size: 12px;
+    }
+
+    .project-item .project-banner .project-details > div{
+        width: 30vw;
+        padding: 0 0.3em;
+    }
+    .project-item .project-banner .project-details{
+        flex-wrap: wrap;
+    }
+
+    .project-item .project-link {
+        width: 100% !important;
+        text-align: center;
+    }
+    .project-item .project-banner .banner-infos {
+        padding: 0 0.3em;
+        height: max-content;
+    }
+
 }

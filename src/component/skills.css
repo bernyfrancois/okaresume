@@ -39,5 +39,27 @@
 
 .skills-shape{
     width: calc(100% - 320px);
-    min-width: 800px;
+}
+
+
+
+@media all and (max-width: 830px){
+    .skills-shape{
+        width: 100%;
+    }
+}
+
+
+@media all and (max-width: 480px){
+
+    .skills .pp{
+        height: 60px;
+        width: 60px;
+    }
+
+    .skills .description {
+        min-width: auto;
+        width: 300px;
+        margin-right: 0;
+    }
 }
