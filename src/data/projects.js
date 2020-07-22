@@ -47,23 +47,6 @@ export const PROJECTS = [
         banner: coverdeshi,
     },
     {
-        id: 9,
-        title: "Arges",
-        roles: [
-            "Front-end developer",
-        ],
-        clients: [
-            "Université Bordeaux Montaigne (school project)"
-        ],
-        technos: [
-            "Html",
-            "Css",
-            "Bootstrap"
-        ],
-        link: "https://okafrancois.github.io/arges/",
-        banner: coverdeshi,
-    },
-    {
         id: 2,
         title: "Okacode logo",
         roles: [
