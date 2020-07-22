@@ -47,6 +47,7 @@
 .form {
     width: 100%;
     min-width: 500px;
+    margin-bottom: 2rem;
 }
 
 .form h3{
@@ -267,6 +268,13 @@ button.btn:hover::before {
 
     .form form label:nth-child(3), .form form label:nth-child(4) {
         width: 100%;
+    }
+
+    .page-title{
+        margin-bottom: 1rem;
+        margin-right: 0;
+        min-width: 100%;
+        max-width: 100%;
     }
 
 }
