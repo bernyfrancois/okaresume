@@ -1,0 +1,88 @@
+.shape-container{
+    display: flex;
+}
+
+.shape-container .skill-col{
+    width: 20%;
+    margin-right: 0.3rem;
+}
+
+.skill-col .skill-title, .skill-col .skill-levels .level{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    margin: 0.3rem 0;
+    padding: 0 0.5rem;
+    overflow: hidden;
+}
+
+.skill-col .skill-title{
+    background: var(--maincolor);
+    font-size: 15px;
+}
+
+.skill-col .skill-levels .level{
+    background: #29354E;
+    transition: height 0.2s ease-out;
+}
+
+.active .skill-col .skill-levels .level{
+    height: 50px;
+}
+
+.skill-col .skill-levels{
+    min-height: calc((50px * 5) + (0.3rem * 5));
+    background: rgba(210, 210, 210, 0.1);
+}
+
+.skill-col .skill-tools{
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-col .skill-tools .tool-icon {
+    height: 20px;
+    width: auto;
+}
+
+@media all and (max-width: 780px){
+
+    .skill-col .skill-levels{
+        min-height: calc((40px * 5) + (0.3rem * 5));
+        background: rgba(210, 210, 210, 0.1);
+    }
+
+    .skill-col .skill-title, .skill-col .skill-levels .level{
+        height: 40px;
+    }
+
+    .skill-col .skill-title{
+        font-size: 12px;
+    }
+
+    .skill-col .skill-levels .level{
+        font-size: 8px;
+    }
+}
+
+@media all and (max-width: 480px){
+
+    .skill-col .skill-levels{
+        display: none;
+    }
+
+    .skill-col .skill-title{
+        font-size: 10px;
+    }
+
+    .skill-col .skill-title, .skill-col .skill-levels .level{
+        padding: 0 0.3rem;
+    }
+}
