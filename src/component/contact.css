@@ -277,4 +277,17 @@ button.btn:hover::before {
         max-width: 100%;
     }
 
+    .title {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+    .form h3 {
+        font-size: 1rem;
+        font-weight: 200 !important;
+    }
+
 }

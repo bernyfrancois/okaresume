@@ -208,4 +208,11 @@
         height: max-content;
     }
 
+    .project-item .project-banner .project-details {
+        flex-wrap: initial;
+    }
+    .slick-list {
+        min-height: 400px;
+    }
+
 }

@@ -85,4 +85,8 @@
     .skill-col .skill-title, .skill-col .skill-levels .level{
         padding: 0 0.3rem;
     }
+
+    .skill-col .skill-tools {
+        padding: 0;
+    }
 }

@@ -232,4 +232,14 @@ header nav ul li+li{
     header nav ul {
         font-size: 3rem;
     }
+
+    #logo-brand {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .menu-toggler {
+        top: 1rem;
+        right: 1rem;
+    }
 }
