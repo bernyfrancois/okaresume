@@ -36,7 +36,6 @@ class App extends Component {
     onEnter = node => {
         const leftBlock = node.querySelector(".animate-left");
         const rightBlock = node.querySelector(".animate-right");
-        console.log(leftBlock)
         gsap.from(
             leftBlock,
             0.7,
@@ -68,7 +67,6 @@ class App extends Component {
     onExit = node => {
         const leftBlock = node.querySelector(".animate-left");
         const rightBlock = node.querySelector(".animate-right");
-        console.log(leftBlock)
         gsap.to(
             leftBlock,
             0.7,

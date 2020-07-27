@@ -10,7 +10,7 @@
 
 # production
 /build
-ecosystem.conf.js
+ecosystem.config.js
 
 # misc
 .DS_Store
