@@ -291,3 +291,25 @@ button.btn:hover::before {
     }
 
 }
+
+.btn-container{
+    position: relative;
+}
+
+.message-text{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    bottom: -70px;
+    font-size: 1.1em;
+}
+
+.message-text.active{
+    opacity: 1;
+    color: #439e43;
+}
+
+.message-text.active.warning{
+    opacity: 1;
+    color: indianred;
+}

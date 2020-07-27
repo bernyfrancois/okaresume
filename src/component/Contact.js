@@ -10,7 +10,9 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            message: "hello",
+            message: undefined,
+            messageActive: false,
+            messageWarning: false,
             name: "",
             email: "",
             currentObject: "",
@@ -35,6 +37,7 @@ class Contact extends Component {
     }
 
     handleChange = (event) => {
+        this.showMessage();
         const target = event.target;
         const value = target.name === 'isGoing' ? target.checked : target.value;
         const name = target.name;
@@ -66,6 +69,15 @@ class Contact extends Component {
         this.setState({currentBudget: target.value})
     }
 
+    resetForm = () => {
+        this.setState({
+            name: "",
+            currentObject: "",
+            currentBudget: "",
+            content: "",
+        })
+    }
+
     sendMail = () => {
         const email = {
             "user_name": this.state.name,
@@ -74,12 +86,31 @@ class Contact extends Component {
             "user_budget": this.state.currentBudget,
             "user_message":this.state.content
         }
-        emailjs.send('gmail', 'resume', email, emailId)
+        emailjs.send('gmil', 'resume', email, emailId)
             .then((result) => {
-                console.log(result.text);
+                this.setState({
+                    message: "✅ All right, I got your message. I'll get back to you soon. "
+                })
+                this.resetForm()
+                this.showMessage()
             }, (error) => {
-                console.log(error.text);
+                this.setState({
+                    message: "Oops, there's been a problem. Try again and remember to check your internet connection before 🙂."
+                })
+                this.showMessageWarn()
             });
+    }
+
+    showMessage = () => {
+        this.setState({
+            messageActive: !this.state.messageActive
+        })
+    }
+
+    showMessageWarn = () => {
+        this.setState({
+            messageWarning: !this.state.messageWarning
+        })
     }
 
     render() {
@@ -101,7 +132,7 @@ class Contact extends Component {
                     </span>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/fran%C3%A7ois-itoutou-652a2917a/" target="_blank" rel="noopener noreferrer">François Itoutou <img className="social-icon" src={linkedin} alt="icon"/></a></li>
-                            <li><a href="https://github.com/bernyfrancois" target="_blank" rel="noopener noreferrer">bernyfrancois <img className="social-icon" src={github} alt="icon"/></a></li>
+                            <li><a href="https://github.com/okafrancois" target="_blank" rel="noopener noreferrer">okafrancois <img className="social-icon" src={github} alt="icon"/></a></li>
                         </ul>
                     </div>
                 </div>
@@ -130,15 +161,16 @@ class Contact extends Component {
                         </label>
                         <div className="btn-container">
                             <button type={"sudmit"} className="btn">Send {`${this.state.message !== undefined ? "new" : ""}`} message</button>
-                            {this.state.message !== undefined && <div className="message">
+                            <div className={`message-text ${this.state.messageActive ? "active" : ""} ${this.state.messageWarning ? "warning" : ""}`}>
                                 <span>{this.state.message}</span>
-                            </div>}
+                            </div>
                         </div>
                     </form>
                 </div>
             </section>
         );
     }
+
 }
 
 const SelectInput = ({options, placeholder, changeHandler}) => (
