@@ -86,7 +86,7 @@ class Contact extends Component {
             "user_budget": this.state.currentBudget,
             "user_message":this.state.content
         }
-        emailjs.send('gmil', 'resume', email, emailId)
+        emailjs.send('gmail', 'resume', email, emailId)
             .then((result) => {
                 this.setState({
                     message: "✅ All right, I got your message. I'll get back to you soon. "
