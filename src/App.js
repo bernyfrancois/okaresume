@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import gsap from "gsap";
+import ReactGA from 'react-ga';
 import './App.css';
 import Header from "./component/Header";
 import HomePage from "./component/HomePage";
@@ -26,6 +27,10 @@ class App extends Component {
             competences: [],
             projects: []
         }
+    }
+
+    componentDidMount() {
+        ReactGA.initialize('UA-137829630-4');
     }
 
     onEnter = node => {

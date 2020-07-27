@@ -10,6 +10,7 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            message: "hello",
             name: "",
             email: "",
             currentObject: "",
@@ -128,7 +129,10 @@ class Contact extends Component {
                             <textarea rows={"1"} name={"content"} value={this.state.content} onChange={this.handleTxtChange} placeholder={"What's your message?"}/>
                         </label>
                         <div className="btn-container">
-                            <button type={"sudmit"} className="btn">Send message</button>
+                            <button type={"sudmit"} className="btn">Send {`${this.state.message !== undefined ? "new" : ""}`} message</button>
+                            {this.state.message !== undefined && <div className="message">
+                                <span>{this.state.message}</span>
+                            </div>}
                         </div>
                     </form>
                 </div>
