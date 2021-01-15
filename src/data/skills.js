@@ -52,11 +52,11 @@ export const SKILLS = [
         ],
         tools: [
             {
-                link: "#",
+                link: "https://www.w3.org/",
                 icon: html
             },
             {
-                link: "#",
+                link: "https://www.w3.org/Style/CSS/Overview.fr.html",
                 icon: css
             },
             {

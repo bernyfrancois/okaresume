@@ -9,7 +9,6 @@
 /coverage
 
 # production
-/build
 ecosystem.config.js
 
 # misc
