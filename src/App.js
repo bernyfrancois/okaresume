@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import gsap from "gsap";
-import ReactGA from 'react-ga';
 import './App.css';
 import Header from "./component/Header";
 import HomePage from "./component/HomePage";
 import Projects from "./component/Projects";
 import Skills from "./component/Skills";
 import Contact from "./component/Contact";
+import ReactGA from "react-ga";
 const routes = [
     { path: "/", name: "home", component: HomePage },
     { path: "/skills", name: "skills", component: Skills },
@@ -16,22 +16,9 @@ const routes = [
     { path: "/contact", name: "contact", component: Contact },
 ];
 
-
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            user: {
-                email: "itoutouberny@gmail.com"
-            },
-            competences: [],
-            projects: []
-        }
-    }
-
-    componentDidMount() {
-        ReactGA.initialize('G-79V37F6TZ2');
-        ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
     onEnter = node => {
@@ -64,7 +51,6 @@ class App extends Component {
             }
         )
     }
-
     onExit = node => {
         const leftBlock = node.querySelector(".animate-left");
         const rightBlock = node.querySelector(".animate-right");
@@ -95,6 +81,10 @@ class App extends Component {
                 }
             }
         )
+    }
+    componentDidMount() {
+        ReactGA.initialize('G-79V37F6TZ2');
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
     render() {
