@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import gsap from "gsap";
@@ -17,10 +17,6 @@ const routes = [
 ];
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     onEnter = node => {
         const leftBlock = node.querySelector(".animate-left");
         const rightBlock = node.querySelector(".animate-right");

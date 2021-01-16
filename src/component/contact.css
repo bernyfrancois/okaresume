@@ -103,6 +103,12 @@
     height: auto;
 }
 
+label.disabled.budget-label {
+    user-select: none;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
 .form form .label-title{
     color: var(--alternativecolor);
     margin-bottom: .3rem;
