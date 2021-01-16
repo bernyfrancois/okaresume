@@ -31,6 +31,7 @@ class App extends Component {
 
     componentDidMount() {
         ReactGA.initialize('UA-137829630-4');
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
     onEnter = node => {
