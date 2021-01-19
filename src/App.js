@@ -8,7 +8,6 @@ import HomePage from "./component/HomePage";
 import Projects from "./component/Projects";
 import Skills from "./component/Skills";
 import Contact from "./component/Contact";
-import ReactGA from "react-ga";
 const routes = [
     { path: "/", name: "home", component: HomePage },
     { path: "/skills", name: "skills", component: Skills },
@@ -77,10 +76,6 @@ class App extends Component {
                 }
             }
         )
-    }
-    componentDidMount() {
-        ReactGA.initialize('G-79V37F6TZ2');
-        ReactGA.pageview(window.location.pathname + window.location.search);
     }
 
     render() {
