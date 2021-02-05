@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "./static/css/main.c79c61ab.chunk.css",
-    "main.js": "./static/js/main.0afd9143.chunk.js",
-    "main.js.map": "./static/js/main.0afd9143.chunk.js.map",
+    "main.js": "./static/js/main.64f339a5.chunk.js",
+    "main.js.map": "./static/js/main.64f339a5.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.0c5d9efe.js",
     "runtime-main.js.map": "./static/js/runtime-main.0c5d9efe.js.map",
     "static/css/2.ab84ab19.chunk.css": "./static/css/2.ab84ab19.chunk.css",
     "static/js/2.7a43e27f.chunk.js": "./static/js/2.7a43e27f.chunk.js",
     "static/js/2.7a43e27f.chunk.js.map": "./static/js/2.7a43e27f.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.58d59f5848b8145fe4a0f06412a83e21.js": "./precache-manifest.58d59f5848b8145fe4a0f06412a83e21.js",
+    "precache-manifest.30f8ee67077ac6925f50add601c2fa3f.js": "./precache-manifest.30f8ee67077ac6925f50add601c2fa3f.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.ab84ab19.chunk.css.map": "./static/css/2.ab84ab19.chunk.css.map",
     "static/css/main.c79c61ab.chunk.css.map": "./static/css/main.c79c61ab.chunk.css.map",
     "static/js/2.7a43e27f.chunk.js.LICENSE.txt": "./static/js/2.7a43e27f.chunk.js.LICENSE.txt",
-    "static/media/ccaimag.png": "./static/media/ccaimag.3c8deaaa.png",
-    "static/media/deshimag.png": "./static/media/deshimag.42e87717.png",
-    "static/media/dimosimori.png": "./static/media/dimosimori.43e402b9.png",
-    "static/media/dona.png": "./static/media/dona.fe82c3ce.png",
-    "static/media/myga.png": "./static/media/myga.1020ec68.png",
-    "static/media/okabermudes.png": "./static/media/okabermudes.11fff8ef.png",
-    "static/media/okacode.png": "./static/media/okacode.e1995735.png",
-    "static/media/okafrancois.png": "./static/media/okafrancois.566f7236.png",
+    "static/media/ccaimag.png": "./static/media/ccaimag.30771f58.png",
+    "static/media/deshimag.png": "./static/media/deshimag.2518d10c.png",
+    "static/media/dimosimori.png": "./static/media/dimosimori.a5caa43a.png",
+    "static/media/dona.png": "./static/media/dona.0d3d07f6.png",
+    "static/media/myga.png": "./static/media/myga.6e37ec8b.png",
+    "static/media/okabermudes.png": "./static/media/okabermudes.5d4a45ff.png",
+    "static/media/okacode.png": "./static/media/okacode.c7449d95.png",
+    "static/media/okafrancois.png": "./static/media/okafrancois.accfb653.png",
     "static/media/pp.png": "./static/media/pp.a84cdfce.png",
     "static/media/profile-img.png": "./static/media/profile-img.4a088431.png",
-    "static/media/proxima.png": "./static/media/proxima.f6cd51fa.png",
+    "static/media/proxima.png": "./static/media/proxima.abcbbfae.png",
     "static/media/slick-theme.css": "./static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
@@ -32,6 +32,6 @@
     "static/css/2.ab84ab19.chunk.css",
     "static/js/2.7a43e27f.chunk.js",
     "static/css/main.c79c61ab.chunk.css",
-    "static/js/main.0afd9143.chunk.js"
+    "static/js/main.64f339a5.chunk.js"
   ]
 }
