@@ -7,7 +7,7 @@ import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-const trackingId = "G-79V37F6TZ2"; // Replace with your Google Analytics tracking ID
+const trackingId = "G-2S5G38CM60"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 const history = createBrowserHistory();
 
