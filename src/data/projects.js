@@ -7,6 +7,9 @@ import covermyga from "./projects/myga.png";
 import coverproxima from "./projects/proxima.png";
 import coverokacode from "./projects/okacode.png";
 import coverccaimag from "./projects/ccaimag.png";
+import coverorganeus from "./projects/sitecap1.png";
+import coveradiaeco from "./projects/sitecap2.png";
+import coverjuristec from "./projects/sitecap3.png";
 
 export const PROJECTS = [
     {
@@ -31,6 +34,66 @@ export const PROJECTS = [
     },
     {
         id: 1,
+        title: "ORGANEUS ORG",
+        roles: [
+            "UX-UI Designer",
+            "Front-end Developer",
+            "Wordpress Technician",
+        ],
+        clients: [
+            "Organeus France"
+        ],
+        technos: [
+            "Html",
+            "Css",
+            "Wordpress",
+            "Elementor Builder",
+        ],
+        link: "https://organeus.org",
+        banner: coverorganeus,
+    },
+    {
+        id: 2,
+        title: "ADIAECO",
+        roles: [
+            "UX-UI Designer",
+            "Front-end Developer",
+            "Wordpress Technician",
+        ],
+        clients: [
+            "Organeus France"
+        ],
+        technos: [
+            "Html",
+            "Css",
+            "Wordpress",
+            "Divi Builder",
+        ],
+        link: "https://adiaeco.organeus.org/",
+        banner: coveradiaeco,
+    },
+    {
+        id: 3,
+        title: "Juriste Contentieux",
+        roles: [
+            "UX-UI Designer",
+            "Front-end Developer",
+            "Wordpress Technician",
+        ],
+        clients: [
+            "Organeus France"
+        ],
+        technos: [
+            "Html",
+            "Css",
+            "Wordpress",
+            "Divi Builder",
+        ],
+        link: "http://juriste-contentieux.organeus.org/",
+        banner: coverjuristec,
+    },
+    {
+        id: 4,
         title: "DeshiMag integration",
         roles: [
             "Front-end developer",
@@ -47,7 +110,7 @@ export const PROJECTS = [
         banner: coverdeshi,
     },
     {
-        id: 2,
+        id: 5,
         title: "Okacode logo",
         roles: [
             "Web designer",
@@ -62,7 +125,7 @@ export const PROJECTS = [
         banner: coverokacode,
     },
     {
-        id: 3,
+        id: 6,
         title: "Oka Labs Blog",
         roles: [
             "Front-end developer",
@@ -79,7 +142,7 @@ export const PROJECTS = [
         banner: coverokabermudes,
     },
     {
-        id: 4,
+        id: 7,
         title: "Dona Pen Design",
         roles: [
             "Wordpress Developer",
@@ -95,7 +158,7 @@ export const PROJECTS = [
         banner: coverdonapen,
     },
     {
-        id: 5,
+        id: 8,
         title: "Ong Dimorsiri",
         roles: [
             "Front-end Developer",
@@ -113,7 +176,7 @@ export const PROJECTS = [
         banner: coverdimo,
     },
     {
-        id: 6,
+        id: 9,
         title: "CCAIMAG",
         roles: [
             "Front-end Developer",
@@ -131,7 +194,7 @@ export const PROJECTS = [
         banner: coverccaimag,
     },
     {
-        id: 7,
+        id: 10,
         title: "My.ga",
         roles: [
             "Front-end Developer",
@@ -148,7 +211,7 @@ export const PROJECTS = [
         banner: covermyga,
     },
     {
-        id: 8,
+        id: 11,
         title: "Proxima",
         roles: [
             "Front-end Developer",
