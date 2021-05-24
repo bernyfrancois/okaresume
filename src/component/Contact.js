@@ -137,7 +137,7 @@ class Contact extends Component {
                     </div>
                 </div>
                 <div className="form animate-right">
-                    <h3>Got a project ? Leave me a message if you want to work together on something exciting. Web or Mobile.</h3>
+                    <h3>Got a project ? Leave me a message if you want us to work together on an interesting project.</h3>
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             <span className="label-title">Your name</span>

@@ -17,7 +17,7 @@ const HomePage = () => {
                     <div className="title">
                         <h1>Website and Web <br/> Application developer</h1>
                         <p>
-                            I dived into the world of development since 2018 <br/>and I still have the same passion.
+                            I've dived into the world of development since 2018 <br/>and I still have the same passion.
                         </p>
                     </div>
                 </div>
