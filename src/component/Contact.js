@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 import "./contact.css";
 import linkedin from "../files/linkedin.png";
 import github from "../files/github.png";
-const emailId = "user_o4DXJP8WSMpuo7XuMHM5d";
 
 class Contact extends Component {
     constructor(props) {
@@ -33,6 +32,11 @@ class Contact extends Component {
                     { value: '5000+', label: '5000€ or more' },
                 ]
             },
+            emailData: {
+                serviceID: 'service_gmail',
+                templateID: 'resume',
+                userID: 'user_o4DXJP8WSMpuo7XuMHM5d'
+            }
         };
     }
 
@@ -86,18 +90,20 @@ class Contact extends Component {
             "user_budget": this.state.currentBudget,
             "user_message":this.state.content
         }
-        emailjs.send('gmail', 'resume', email, emailId)
+        emailjs.send(this.state.emailData.serviceID, this.state.emailData.templateID, email, this.state.emailData.userID)
             .then((result) => {
+                this.resetForm()
                 this.setState({
                     message: "✅ All right, I got your message. I'll get back to you soon. "
                 })
-                this.resetForm()
                 this.showMessage()
             }, (error) => {
-                this.setState({
-                    message: "Oops, there's been a problem. Try again and remember to check your internet connection before 🙂."
-                })
+                console.log(error)
                 this.showMessageWarn()
+                this.setState({
+                    message: "Oops, there's been a problem. Try again and remember to check your internet connection before."
+                })
+
             });
     }
 
