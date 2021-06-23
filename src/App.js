@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import gsap from "gsap";
 import './App.css';
@@ -8,12 +8,26 @@ import HomePage from "./component/HomePage";
 import Projects from "./component/Projects";
 import Skills from "./component/Skills";
 import Contact from "./component/Contact";
+import ReactGA from "react-ga";
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
+
 const routes = [
     { path: "/", name: "home", component: HomePage },
     { path: "/skills", name: "skills", component: Skills },
     { path: "/projects", name: "projects", component: Projects },
     { path: "/contact", name: "contact", component: Contact },
 ];
+
+const trackingId = "G-XPM47SX8KW"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
+const history = createBrowserHistory();
+
+// Initialize google analytics page view tracking
+history.listen(location => {
+    ReactGA.set({ page: location.pathname }); // Update the user's current page
+    ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
 
 class App extends Component {
     onEnter = node => {
@@ -81,7 +95,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <BrowserRouter>
+                <Router history={history}>
                     <Header/>
                     <Route render={({location}) => (
                         <TransitionGroup>
@@ -98,7 +112,7 @@ class App extends Component {
                             </CSSTransition>
                         </TransitionGroup>
                     )}/>
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }
